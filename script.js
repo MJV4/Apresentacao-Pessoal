@@ -1,30 +1,34 @@
+// Rolagem suave ao clicar nos links
 document.querySelectorAll("a[href^='#']").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
+    const destino = document.querySelector(this.getAttribute("href"));
+    if (destino) {
+      destino.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   });
 });
 
+// Selecionar todas as sections
 const sections = document.querySelectorAll("section");
 
+// Função de revelar ao rolar
 function revealOnScroll() {
   sections.forEach((sec) => {
-    const react = sec.getBoundingClientRect();
-    if (react.top < window.innerHeight - 100) {
-      sec.style.opacity = "1";
-      sec.style.transform = "translateY(0)";
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      sec.classList.add("show");
     }
   });
 }
 
+// Ativar ao scroll
 window.addEventListener("scroll", revealOnScroll);
 
-sections.forEach((sec) => {
-  sec.style.opacity = "0";
-  sec.style.transform = "translateY(40px)";
-  sec.style.transition = "0.8s";
-});
+// Estado inicial
+sections.forEach((sec) => sec.classList.add("hidden"));
 
+// Chamar ao carregar a página
 revealOnScroll();
