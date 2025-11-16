@@ -5,38 +5,53 @@
 }
 
 body {
-  font-family: Arial, Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f0f2f5;
   color: #333;
   line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
 header h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 52px;
+  font-weight: 700;
 }
 
 header h2 {
-  font-size: 24px;
+  font-size: 22px;
   opacity: 0.9;
 }
 
+/* ===== SEÇÕES ===== */
 main section {
   width: 90%;
   max-width: 900px;
   margin: 40px auto;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+main section:hover {
+  transform: translateY(-3px);
 }
 
 main section h3 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 15px;
   color: #283e51;
 }
 
+/* ===== HABILIDADES ===== */
 #habilidades ul {
   list-style: none;
   display: flex;
@@ -47,10 +62,18 @@ main section h3 {
 #habilidades li {
   background: #4b79a1;
   color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
+#habilidades li:hover {
+  background: #3c6a8d;
+  cursor: default;
+}
+
+/* ===== PROJETOS ===== */
 .projetos-container {
   display: flex;
   gap: 20px;
@@ -58,35 +81,53 @@ main section h3 {
 }
 
 .card {
-  background: #eee;
+  background: #f8f9fa;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 12px;
   flex: 1;
-  min-width: 200px;
+  min-width: 240px;
   text-align: center;
+  font-size: 20px;
+  font-weight: 600;
   transition: 0.3s;
-  cursor: pointer;
+  border: 1px solid #ddd;
 }
 
 .card:hover {
   transform: scale(1.05);
-  background: #ddd;
+  background: white;
+  border-color: #4b79a1;
+  cursor: pointer;
 }
 
+/* ===== CONTATO ===== */
 #contato a {
   color: #4b79a1;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 #contato a:hover {
-  text-decoration: underline;
+  opacity: 0.7;
 }
 
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #283e51;
+  padding: 25px;
+  background: #283e51;
   color: white;
   margin-top: 40px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 38px;
+  }
+
+  .card {
+    min-width: 100%;
+  }
 }
