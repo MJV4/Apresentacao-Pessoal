@@ -11,7 +11,7 @@ const sections = document.querySelectorAll("section");
 
 function revealOnScroll() {
   sections.forEach((sec) => {
-    const react = sec.getBoundingClientReact();
+    const react = sec.getBoundingClientRect();
     if (react.top < window.innerHeight - 100) {
       sec.style.opacity = "1";
       sec.style.transform = "translateY(0)";

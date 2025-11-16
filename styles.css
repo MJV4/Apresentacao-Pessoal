@@ -51,6 +51,17 @@ main section h3 {
   color: #283e51;
 }
 
+section.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== HABILIDADES ===== */
 #habilidades ul {
   list-style: none;
