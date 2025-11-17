@@ -16,7 +16,7 @@ header {
   background: linear-gradient(135deg, #4b79a1, #283e51);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 30px 20px;
 }
 
 header h1 {
@@ -34,11 +34,12 @@ main section {
   width: 90%;
   max-width: 900px;
   margin: 40px auto;
+  font-size: 25px;
   background: white;
-  padding: 30px;
-  border-radius: 15px;
+  padding: 80px;
+  border-radius: 80px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 main section:hover {
@@ -46,42 +47,40 @@ main section:hover {
 }
 
 main section h3 {
-  font-size: 28px;
+  font-size: 35px;
   margin-bottom: 15px;
   color: #283e51;
 }
 
-section.hidden {
+section {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s ease;
+  translate: -100%;
+  transition: 2.5s ease;
 }
 
 section.show {
+  margin-top: 50px;
   opacity: 1;
-  transform: translateY(0);
+  translate: 0;
 }
 
 nav {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+  margin-top: 15px;
 }
 
 nav a {
+  background-color: black;
   color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  transition: 0.3s;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 200ms ease;
 }
 
 nav a:hover {
-  border-color: white;
-  opacity: 0.9;
+  background-color: white;
+  color: black;
+  text-decoration: none;
 }
 
 /* ===== HABILIDADES ===== */
@@ -95,9 +94,9 @@ nav a:hover {
 #habilidades li {
   background: #4b79a1;
   color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 14px;
+  padding: 30px 40px;
+  border-radius: 30px;
+  font-size: 18px;
   transition: 0.3s;
 }
 
@@ -134,6 +133,20 @@ nav a:hover {
 }
 
 /* ===== CONTATO ===== */
+#contato {
+  max-width: 400px;
+  padding: 15px;
+  text-align: center;
+}
+
+#contato h3 {
+  font-size: 30px;
+}
+
+#contato p {
+  font-size: 18px;
+}
+
 #contato a {
   color: #4b79a1;
   text-decoration: none;
